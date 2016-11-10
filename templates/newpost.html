@@ -1,0 +1,24 @@
+<!-- template for new post page -->
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h2 class="new-post-sign">New Post</h2>
+
+    <form method="post">
+      <label>
+        <div class="new-subject-sign">Subject</div>
+        <input type="text" name="subject" value="{{subject}}">
+      </label>
+
+      <label>
+        <div class="new-blog-sign">Blog</div>
+        <textarea name="content">{{content}}</textarea>
+      </label>
+
+      <div class="error">{{error}}</div>
+
+      <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}
