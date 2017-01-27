@@ -293,12 +293,6 @@ class Welcome(BlogHandler):
         else:
             self.redirect('/myblog/signup')
 
-# gallery stuff
-class Gallery(BlogHandler):
-    def get(self):
-            self.render('gallery.html')
-
-
 
 app = webapp2.WSGIApplication([('/', MainPage),
                                ('/rot13', Rot13),
@@ -311,6 +305,5 @@ app = webapp2.WSGIApplication([('/', MainPage),
                                ('/login', Login),
                                ('/logout', Logout),
                                ('/welcome', WelcomePage),
-                               ('/gallery', Gallery)
                                ],
                               debug=True)
